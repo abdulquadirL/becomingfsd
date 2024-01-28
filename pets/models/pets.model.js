@@ -21,9 +21,8 @@ export const editItems = id => {
     try { 
         const index = db.pets.findIndex(pet => pet.id === id) 
         
-        if (index === -1)  {
-            throw new Error( 'Pet not found')
-        } else {
+        if (index === -1) throw new Error( 'Pet not found') 
+        else {
             db.pets[index] = data
             return db.pets[index]
         }
@@ -48,13 +47,12 @@ export const deleteItems = id => {
         //delete item from db
         const index = db.pets.findIndex(pet => pet.id === id) 
 
-        if (index === -1) {
-            throw new Error('Pet not found')
-        } else {
+        if (index === -1) throw new Error('Pet not found') 
+         else {
             db.pets.splice(index, 1)
             return db.pets
         }
     } catch (error) {
-        
+
     }
 }
