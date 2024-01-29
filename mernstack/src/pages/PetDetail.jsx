@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
-// eslint-disable-next-line react/prop-types
-function PetDetail({ setPetToEdit }) {
+
+function PetDetail( setPetToEdit ) {
 
     const [pet, setPet] = useState([])
 
@@ -46,7 +46,9 @@ function PetDetail({ setPetToEdit }) {
                             <button style={{ marginRight: 10, }}> Edit pet </button>
                         </Link>
 
-                        <button style={{ marginLeft: 10}} onClick={ () => deletePet}>Delete pet</button>
+                        <button style={{ marginLeft: 10}} onClick={ () => deletePet}>
+                            Delete pet
+                        </button>
                     </div>
                 </>
             )}

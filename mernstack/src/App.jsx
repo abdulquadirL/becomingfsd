@@ -4,9 +4,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // import viteLogo from '/vite.svg'
 import './App.css'
 
+const PetList = lazy(() => import('./pages/PetList'))
+const PetDetail = lazy(() => import('./pages/PetDetail'))
+const AddPet = lazy(() => import('./pages/AddPet'))
+const EditPet = lazy(() => import('./pages/EditPet'))
+
 function App() {
+
   const [ petToEdit, setPetToEdit ] = useState(null);
-  const [ count, setCount] = useState(0);
+  
 
   return (
     
