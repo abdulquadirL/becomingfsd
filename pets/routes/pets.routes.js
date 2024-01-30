@@ -6,7 +6,7 @@ import {
     addPet,
     deletePet,
 } from "../controllers/pets.controllers.js"
-import swaggerJsdoc from "swagger-jsdoc";
+import swaggerJSdoc from "swagger-jsdoc";
 
 const router = express.Router();
 
